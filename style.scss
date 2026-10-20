@@ -1,0 +1,16 @@
+@use "spacing" as *;
+@use "typography" as *;
+@use "colors" as *;
+@use "dimensions" as *;
+@use "breakpoints" as *;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color-background);
+}
