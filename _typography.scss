@@ -1,39 +1,77 @@
 @use "sass:map";
+@use "colors" as *;
 
-$font-barlow: "Barlow Semi Condensed", sans-serif;
+$font-red-hat-display: "Red Hat Display", sans-serif;
 
 $text-presets: (
-    1: (
-        font-family: $font-barlow,
-        font-size: 1.25rem,
-        line-height: 1.2,
-        letter-spacing: 0,
-        font-weight: 600
-    ),
+  1-mobile: (
+    font-family: $font-red-hat-display,
+    font-size: 2.5rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: 900
+    // font-color: var(--color-slate-900)
+  ),
+  1-desktop: (
+    font-family: $font-red-hat-display,
+    font-size: 4rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: 900
+    // font-color: var(--color-slate-900)
+  ),
 
-    2: (
-        font-family: $font-barlow,
-        font-size: 0.8125rem,
-        line-height: 1.1,
-        letter-spacing: 0,
-        font-weight: 400
-    ),
+  2-mobile: (
+    font-family: $font-red-hat-display,
+    font-size: 2rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: 900
+    // font-color: var(--color-slate-900)
+  ),
+  2-desktop: (
+    font-family: $font-red-hat-display,
+    font-size: 2.5rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: 900
+    // font-color: var(--color-slate-900)
+  ),
 
-    3: (
-        font-family: $font-barlow,
-        font-size: 0.8125rem,
-        line-height: 1.4,
-        letter-spacing: 0,
-        font-weight: 400
-    ),
+  3: (
+    font-family: $font-red-hat-display,
+    font-size: 1rem,
+    line-height: 1.1,
+    letter-spacing: 0.25rem,
+    font-weight: 900
+    // font-color: var(--color-cyan-600)
+  ),
 
-    4: (
-        font-family: $font-barlow,
-        font-size: 0.6875rem,
-        line-height: 1.1,
-        letter-spacing: 0,
-        font-weight: 400
-    )
+  4-mobile: (
+    font-family: $font-red-hat-display,
+    font-size: 1rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: medium
+    // font-color: var(--color-slate-600)
+  ),
+  4-desktop: (
+    font-family: $font-red-hat-display,
+    font-size: 1.125rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: medium
+    // font-color: var(--color-slate-900)
+  ),
+
+  5: (
+    font-family: $font-red-hat-display,
+    font-size: 1rem,
+    line-height: 1.5,
+    letter-spacing: 0,
+    font-weight: 900
+    // font-color: var(--color-slate-900)
+  )
 );
 
 @mixin text-preset($preset) {
@@ -48,4 +86,6 @@ $text-presets: (
     line-height: map.get($config, line-height);
     letter-spacing: map.get($config, letter-spacing);
     font-weight: map.get($config, font-weight);
+    // color: map.get($config, font-color);
+    
 }

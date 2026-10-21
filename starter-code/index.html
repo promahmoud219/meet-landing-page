@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Red Hat Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
   <title>Frontend Mentor | Meet landing page</title>
 </head>
 <body>
@@ -34,18 +41,17 @@
         </p>
         <div class="hero__actions">
           <a href="https://zoom.us/download?os=win" class="button button--primary ">
-            Download v1.3
+            Download <span>v1.3</span>
           </a>
           <a href="https://www.zoom.com/en/about/" class="button button--secondary">
             What is it?
           </a>
         </div>
-
       </div>
     </section>    
     
     <section class="features" aria-labelledby="features-title">
-      <div class="section-number" aria-hidden="true">
+      <div class="section-number features__section-number" aria-hidden="true">
         <span>01</span>
       </div>
       <div class="features__gallery">
@@ -55,8 +61,10 @@
           <img src="./assets/desktop/image-man-texting.jpg" alt="">
       </div>
       <div class="features__content">
-        <p class="features__title-eyebrow">Built for modern use</p>
-        <h2 id="features-title">Smarter meetings, all in one place</h2>
+        <div class="features__heading-group">
+          <p class="features__title-eyebrow">Built for modern use</p>
+          <h2 id="features-title">Smarter meetings, all in one place</h2>
+        </div>
         <p class="features__description">
           Send messages, share files, show your screen, and record your meetings — all in one 
           workspace. Control who can join with invite-only team access, data encryption, and data export.
@@ -66,16 +74,16 @@
  
   </main>
     <footer class="site-footer">
-    <div class="section-number" aria-hidden="true">
-      <span>02</span>
-    </div>
-    <div class="site-footer__content">
-      <h2 class="site-footer__title">Experience more together</h2>
-      <p class="description site-footer__description">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-      <a href="https://zoom.us/download?os=win" class="button button--secondary">
-        Download <span>v1.3</span>
-      </a>
-    </div>
+      <div class="section-number site-footer__section-number" aria-hidden="true">
+        <span>02</span>
+      </div>
+      <div class="site-footer__content">
+        <h2 class="site-footer__title">Experience more together</h2>
+        <p class="description site-footer__description">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+        <a href="https://zoom.us/download?os=win" class="button button--secondary">
+          Download <span>v1.3</span>
+        </a>
+      </div>
   </footer> 
 </body>
 </html>

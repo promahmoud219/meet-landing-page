@@ -11,6 +11,210 @@
     box-sizing: border-box;
 }
 
-body{
-    background: var(--color-background);
+body{ 
+    background: var(--color-white);
+    width: 100%;
 }
+
+header { 
+    padding: 48px 80px  0px; 
+    display: flex;
+    height: 76px;
+    justify-content: center;
+    align-items: end;
+}
+
+a{
+    text-decoration: none; 
+}
+
+.button{
+    @include text-preset(5);
+    padding: var(--spacing-200) var(--spacing-500);
+    border-radius: 29px;
+    display: flex;
+    gap: 8px;
+}
+
+.button--primary{
+    color: var(--color-white);
+    background: var(--color-cyan-600);
+}
+
+.button--secondary{
+    color: var(--color-white);
+    background: var(--color-purple-600);
+}
+
+.hero{
+    width: 100%; 
+    padding-top: 64px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    .hero__gallery{
+        display: flex;
+        width: 100%;
+        gap: 21px; 
+        overflow: hidden;
+
+        img{
+            width: 50%;
+        }
+    }
+
+    .hero__content{ 
+        display: flex;
+        flex-direction: column;
+        gap: 24px; 
+        padding: 0px 50px;
+        text-align: center;
+
+        #hero-title{
+            @include text-preset(1-mobile); 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .hero__actions{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-200);
+
+            .button--primary span{
+                color: var(--color-cyan-300);
+            }
+        }
+    }
+}
+ 
+.section-number {
+    @include text-preset(5);
+    color: var(--color-slate-600);
+
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-slate-300);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+
+        width: 1px;
+        height: 80px;
+
+        background: var(--color-slate-300);
+
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+} 
+
+.features { 
+    padding: 112px 32px 144px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+
+
+    .features__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+
+    .features__content{
+        display: flex;        
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+
+        .features__heading-group{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .features__title-eyebrow{
+                @include text-preset(3);
+                color: var(--color-cyan-600);
+            }
+            #features-title{
+                @include text-preset(2-mobile);
+                color: var(--color-slate-900);
+            }
+        }
+
+        .features__description{
+            @include text-preset(4-mobile);
+            color: var(--color-slate-600);
+        }
+
+    }
+}
+
+.site-footer{
+    text-align: center;
+    background-image: linear-gradient(#4d97a9c4), url("./starter-code/assets/mobile/image-footer.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    height: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .site-footer__section-number {
+        position: absolute;
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        // z-index: 10;
+        background: var(--color-white);
+    }
+
+    .site-footer__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 64px 32px;
+        height: 100%;
+        .site-footer__title{
+            @include text-preset(2-mobile);
+        }
+        
+        .site-footer__description{
+            @include text-preset(4-mobile);
+        }
+
+        .button--secondary span{
+            color: var(--color-purple-300);
+        }
+
+    }
+}
+

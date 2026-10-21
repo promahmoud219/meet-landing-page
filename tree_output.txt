@@ -1,0 +1,14 @@
+.
+├── AGENTS.md
+├── CLAUDE.md
+├── README-template.md
+├── README.md
+├── starter-code
+│   ├── assets
+│   │   ├── desktop
+│   │   ├── mobile
+│   │   └── tablet
+│   └── index.html
+└── style.css
+
+5 directories, 6 files
