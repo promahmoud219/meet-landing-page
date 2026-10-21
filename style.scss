@@ -241,6 +241,7 @@ a{
     @media (min-width: $breakpoint-tablet) {
         background-image: linear-gradient(#4d97a9c4), url("./starter-code/assets/tablet/image-footer.jpg"); 
     }
+
     .site-footer__section-number {
         position: absolute;
         top: -28px;
@@ -249,7 +250,6 @@ a{
         // z-index: 10;
         background: var(--color-white);
     }
-
     .site-footer__content{
         display: flex;
         flex-direction: column;
@@ -261,18 +261,15 @@ a{
         .site-footer__title{
             @include text-preset(2-mobile);
         }
-        
         .site-footer__description{
             @include text-preset(4-mobile);
             @media (min-width: $breakpoint-tablet) {
                 width: 504px;
             }
         }
-
         .button--secondary span{
             color: var(--color-purple-300);
         }
 
     }
 }
-
