@@ -10,7 +10,13 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-    // font-color: var(--color-slate-900)
+  ),
+  1-tablet: (
+    font-family: $font-red-hat-display,
+    font-size: 3rem,
+    line-height: 1.1,
+    letter-spacing: 0,
+    font-weight: 900
   ),
   1-desktop: (
     font-family: $font-red-hat-display,
@@ -18,7 +24,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-    // font-color: var(--color-slate-900)
   ),
 
   2-mobile: (
@@ -27,7 +32,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-    // font-color: var(--color-slate-900)
   ),
   2-desktop: (
     font-family: $font-red-hat-display,
@@ -35,7 +39,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-    // font-color: var(--color-slate-900)
   ),
 
   3: (
@@ -44,7 +47,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0.25rem,
     font-weight: 900
-    // font-color: var(--color-cyan-600)
   ),
 
   4-mobile: (
@@ -53,7 +55,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: medium
-    // font-color: var(--color-slate-600)
   ),
   4-desktop: (
     font-family: $font-red-hat-display,
@@ -61,7 +62,6 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: medium
-    // font-color: var(--color-slate-900)
   ),
 
   5: (
@@ -70,7 +70,6 @@ $text-presets: (
     line-height: 1.5,
     letter-spacing: 0,
     font-weight: 900
-    // font-color: var(--color-slate-900)
   )
 );
 
@@ -85,7 +84,5 @@ $text-presets: (
     font-size: map.get($config, font-size);
     line-height: map.get($config, line-height);
     letter-spacing: map.get($config, letter-spacing);
-    font-weight: map.get($config, font-weight);
-    // color: map.get($config, font-color);
-    
+    font-weight: map.get($config, font-weight); 
 }

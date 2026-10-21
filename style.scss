@@ -17,7 +17,7 @@ body{
 }
 
 header { 
-    padding: 48px 80px  0px; 
+    padding: 48px 80px 0px; 
     display: flex;
     height: 76px;
     justify-content: center;
@@ -52,37 +52,76 @@ a{
     padding-bottom: 32px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 48px;
-    .hero__gallery{
+    
+    @media (min-width: $breakpoint-tablet) {
+        gap: 72px;  
+        padding-bottom: 64px; 
+    }
+    
+    .hero__gallery {
         display: flex;
         width: 100%;
-        gap: 21px; 
+        gap: 21px;
         overflow: hidden;
-
-        img{
-            width: 50%;
+        
+        &-tablet {
+            display: none;
         }
-    }
+        
+        @media (min-width: $breakpoint-tablet){
+            &-mobile {
+                display: none;
+            }
+            &-tablet {
+                display: block;
+            }
+        }
+        
+        &-mobile img { 
+            width: 50%;
+            object-fit: contain;
+        }
+        
+        &-tablet img{
+            width: 100%;
+        } 
 
+    }
+    
     .hero__content{ 
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 24px; 
         padding: 0px 50px;
         text-align: center;
-
+        
+        @media (min-width: $breakpoint-tablet) {
+            width: 500px;
+        }
         #hero-title{
             @include text-preset(1-mobile); 
             display: flex;
             flex-direction: column;
+            @media (min-width: $breakpoint-tablet) {
+                @include text-preset(1-tablet); 
+            }
         }
-        
+        .hero__description{
+            @include text-preset(4-mobile); 
+            max-width: 526px;
+        }
         .hero__actions{
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: var(--spacing-200);
-
+            @media (min-width: $breakpoint-tablet) {
+                gap: 17px;
+                flex-direction: row;
+            }
             .button--primary span{
                 color: var(--color-cyan-300);
             }
@@ -124,18 +163,24 @@ a{
 
 .features { 
     padding: 112px 32px 144px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 64px;
-
+    
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 136px;
+    }
 
     .features__gallery {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
         width: 100%;
+        @media (min-width: $breakpoint-tablet) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
 
         img {
             display: block;
@@ -144,17 +189,24 @@ a{
             border-radius: 8px;
         }
     }
-
+    
     .features__content{
         display: flex;        
         flex-direction: column;
+        align-items: center;
         gap: 32px;
         text-align: center;
-
+        @media (min-width: $breakpoint-tablet) {
+            width: 504px;
+        }
         .features__heading-group{
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 16px;
+            @media (min-width: $breakpoint-tablet) {
+                width: 404px;
+            }
             .features__title-eyebrow{
                 @include text-preset(3);
                 color: var(--color-cyan-600);
@@ -185,7 +237,10 @@ a{
     flex-direction: column;
     align-items: center;
     position: relative;
-
+    
+    @media (min-width: $breakpoint-tablet) {
+        background-image: linear-gradient(#4d97a9c4), url("./starter-code/assets/tablet/image-footer.jpg"); 
+    }
     .site-footer__section-number {
         position: absolute;
         top: -28px;
@@ -209,6 +264,9 @@ a{
         
         .site-footer__description{
             @include text-preset(4-mobile);
+            @media (min-width: $breakpoint-tablet) {
+                width: 504px;
+            }
         }
 
         .button--secondary span{
