@@ -66,12 +66,10 @@ a {
   display: flex;
   gap: 8px;
 }
-
 .button--primary {
   color: var(--color-white);
   background: var(--color-cyan-600);
 }
-
 .button--secondary {
   color: var(--color-white);
   background: var(--color-purple-600);
@@ -99,7 +97,7 @@ a {
     padding-bottom: 64px;
   }
 }
-.hero .hero__gallery {
+.hero__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,26 +105,26 @@ a {
   gap: 21px;
   overflow: hidden;
 }
-.hero .hero__gallery-tablet {
+.hero__gallery-tablet {
   display: none;
 }
-@media (min-width: 48rem) {
-  .hero .hero__gallery-mobile {
+@media (90rem >= min-width >= 48rem) {
+  .hero__gallery-mobile-and-desktop {
     display: none;
   }
-  .hero .hero__gallery-tablet {
+  .hero__gallery-tablet {
     display: block;
   }
 }
-.hero .hero__gallery-mobile img {
+.hero__gallery-mobile-and-desktop img {
   width: 50%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.hero .hero__gallery-tablet img {
+.hero__gallery-tablet img {
   width: 100%;
 }
-.hero .hero__content {
+.hero__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,11 +140,11 @@ a {
   text-align: center;
 }
 @media (min-width: 48rem) {
-  .hero .hero__content {
+  .hero__content {
     width: 500px;
   }
 }
-.hero .hero__content #hero-title {
+.hero__content #hero-title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2.5rem;
   line-height: 1.1;
@@ -161,7 +159,7 @@ a {
           flex-direction: column;
 }
 @media (min-width: 48rem) {
-  .hero .hero__content #hero-title {
+  .hero__content #hero-title {
     font-family: "Red Hat Display", sans-serif;
     font-size: 3rem;
     line-height: 1.1;
@@ -169,7 +167,7 @@ a {
     font-weight: 900;
   }
 }
-.hero .hero__content .hero__description {
+.hero__content__description {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -177,7 +175,7 @@ a {
   font-weight: medium;
   max-width: 526px;
 }
-.hero .hero__content .hero__actions {
+.hero__content__actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +189,7 @@ a {
   gap: var(--spacing-200);
 }
 @media (min-width: 48rem) {
-  .hero .hero__content .hero__actions {
+  .hero__content__actions {
     gap: 17px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -199,7 +197,7 @@ a {
             flex-direction: row;
   }
 }
-.hero .hero__content .hero__actions .button--primary span {
+.hero__content__actions .button--primary span {
   color: var(--color-cyan-300);
 }
 
@@ -258,7 +256,7 @@ a {
     padding-top: 136px;
   }
 }
-.features .features__gallery {
+.features__gallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(0, 1fr) 16px minmax(0, 1fr);
@@ -267,19 +265,19 @@ a {
   width: 100%;
 }
 @media (min-width: 48rem) {
-  .features .features__gallery {
+  .features__gallery {
     -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
 }
-.features .features__gallery img {
+.features__gallery img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
-.features .features__content {
+.features__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,11 +292,11 @@ a {
   text-align: center;
 }
 @media (min-width: 48rem) {
-  .features .features__content {
+  .features__content {
     width: 504px;
   }
 }
-.features .features__content .features__heading-group {
+.features__content__heading-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,11 +310,11 @@ a {
   gap: 16px;
 }
 @media (min-width: 48rem) {
-  .features .features__content .features__heading-group {
+  .features__content__heading-group {
     width: 404px;
   }
 }
-.features .features__content .features__heading-group .features__title-eyebrow {
+.features__content__heading-group__title-eyebrow {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -324,7 +322,7 @@ a {
   font-weight: 900;
   color: var(--color-cyan-600);
 }
-.features .features__content .features__heading-group #features-title {
+.features__content__heading-group #features-title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2rem;
   line-height: 1.1;
@@ -332,7 +330,7 @@ a {
   font-weight: 900;
   color: var(--color-slate-900);
 }
-.features .features__content .features__description {
+.features__content__description {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -368,7 +366,13 @@ a {
     background-image: linear-gradient(rgba(77, 151, 169, 0.768627451)), url("./starter-code/assets/tablet/image-footer.jpg");
   }
 }
-.site-footer .site-footer__section-number {
+@media (min-width: 90rem) {
+  .site-footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 151, 169, 0.768627451))), url("./starter-code/assets/desktop/image-footer.jpg");
+    background-image: linear-gradient(rgba(77, 151, 169, 0.768627451)), url("./starter-code/assets/desktop/image-footer.jpg");
+  }
+}
+.site-footer__section-number {
   position: absolute;
   top: -28px;
   left: 50%;
@@ -376,7 +380,7 @@ a {
           transform: translateX(-50%);
   background: var(--color-white);
 }
-.site-footer .site-footer__content {
+.site-footer__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,14 +398,14 @@ a {
   padding: 64px 32px;
   height: 100%;
 }
-.site-footer .site-footer__content .site-footer__title {
+.site-footer__content__title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2rem;
   line-height: 1.1;
   letter-spacing: 0;
   font-weight: 900;
 }
-.site-footer .site-footer__content .site-footer__description {
+.site-footer__content__description {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -409,10 +413,10 @@ a {
   font-weight: medium;
 }
 @media (min-width: 48rem) {
-  .site-footer .site-footer__content .site-footer__description {
+  .site-footer__content__description {
     width: 504px;
   }
 }
-.site-footer .site-footer__content .button--secondary span {
+.site-footer__content .button--secondary span {
   color: var(--color-purple-300);
 }

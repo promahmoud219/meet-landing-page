@@ -34,17 +34,18 @@ a{
     border-radius: 29px;
     display: flex;
     gap: 8px;
+    &--primary{
+        color: var(--color-white);
+        background: var(--color-cyan-600);
+    }
+
+    &--secondary{
+        color: var(--color-white);
+        background: var(--color-purple-600);
+    }
 }
 
-.button--primary{
-    color: var(--color-white);
-    background: var(--color-cyan-600);
-}
 
-.button--secondary{
-    color: var(--color-white);
-    background: var(--color-purple-600);
-}
 
 .hero{
     width: 100%; 
@@ -60,7 +61,7 @@ a{
         padding-bottom: 64px; 
     }
     
-    .hero__gallery {
+    &__gallery {
         display: flex;
         width: 100%;
         gap: 21px;
@@ -70,8 +71,8 @@ a{
             display: none;
         }
         
-        @media (min-width: $breakpoint-tablet){
-            &-mobile {
+        @media ($breakpoint-desktop >= min-width >= $breakpoint-tablet ){
+            &-mobile-and-desktop {
                 display: none;
             }
             &-tablet {
@@ -79,7 +80,7 @@ a{
             }
         }
         
-        &-mobile img { 
+        &-mobile-and-desktop img { 
             width: 50%;
             object-fit: contain;
         }
@@ -90,7 +91,7 @@ a{
 
     }
     
-    .hero__content{ 
+    &__content{ 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -109,11 +110,11 @@ a{
                 @include text-preset(1-tablet); 
             }
         }
-        .hero__description{
+        &__description{
             @include text-preset(4-mobile); 
             max-width: 526px;
         }
-        .hero__actions{
+        &__actions{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -172,7 +173,7 @@ a{
         padding-top: 136px;
     }
 
-    .features__gallery {
+    &__gallery {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
@@ -190,7 +191,7 @@ a{
         }
     }
     
-    .features__content{
+    &__content{
         display: flex;        
         flex-direction: column;
         align-items: center;
@@ -199,7 +200,7 @@ a{
         @media (min-width: $breakpoint-tablet) {
             width: 504px;
         }
-        .features__heading-group{
+        &__heading-group{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -207,7 +208,7 @@ a{
             @media (min-width: $breakpoint-tablet) {
                 width: 404px;
             }
-            .features__title-eyebrow{
+            &__title-eyebrow{
                 @include text-preset(3);
                 color: var(--color-cyan-600);
             }
@@ -217,7 +218,7 @@ a{
             }
         }
 
-        .features__description{
+        &__description{
             @include text-preset(4-mobile);
             color: var(--color-slate-600);
         }
@@ -241,16 +242,19 @@ a{
     @media (min-width: $breakpoint-tablet) {
         background-image: linear-gradient(#4d97a9c4), url("./starter-code/assets/tablet/image-footer.jpg"); 
     }
+    
+    @media (min-width: $breakpoint-desktop) {
+        background-image: linear-gradient(#4d97a9c4), url("./starter-code/assets/desktop/image-footer.jpg"); 
+    }
 
-    .site-footer__section-number {
+    &__section-number {
         position: absolute;
         top: -28px;
         left: 50%;
-        transform: translateX(-50%);
-        // z-index: 10;
+        transform: translateX(-50%); 
         background: var(--color-white);
     }
-    .site-footer__content{
+    &__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -258,10 +262,10 @@ a{
         gap: 24px;
         padding: 64px 32px;
         height: 100%;
-        .site-footer__title{
+        &__title{
             @include text-preset(2-mobile);
         }
-        .site-footer__description{
+        &__description{
             @include text-preset(4-mobile);
             @media (min-width: $breakpoint-tablet) {
                 width: 504px;
