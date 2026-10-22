@@ -67,40 +67,52 @@ a{
         gap: 21px;
         overflow: hidden;
         
-        &-tablet {
-            display: none;
-        }
-        
-        @media ($breakpoint-desktop >= min-width >= $breakpoint-tablet ){
-            &-mobile-and-desktop {
-                display: none;
-            }
-            &-tablet {
-                display: block;
-            }
-        }
-        
-        &-mobile-and-desktop img { 
-            width: 50%;
-            object-fit: contain;
-        }
-        
-        &-tablet img{
+        img{
             width: 100%;
+        }
+
+        &--split{ 
+            img{
+                width: 50%;
+                object-fit: contain;
+            }
+        }
+        
+        &--combined{
+            display: none;
         } 
 
+        @media (min-width: $breakpoint-tablet) {
+            &--split{
+                display: none;      
+            }
+            &--combined{
+                display: flex;
+            }
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            &--split{
+                display: flex;      
+            }
+            &--combined{
+                display: none;
+            }
+        }
     }
     
     &__content{ 
         display: flex;
         flex-direction: column;
         align-items: center;
+
         gap: 24px; 
-        padding: 0px 50px;
+        padding: 0px 32px;
         text-align: center;
         
         @media (min-width: $breakpoint-tablet) {
-            width: 500px;
+            // width: 500px;
+            // it's better to set the padding : 64px for example than setting the width
         }
         #hero-title{
             @include text-preset(1-mobile); 
@@ -110,22 +122,23 @@ a{
                 @include text-preset(1-tablet); 
             }
         }
-        &__description{
-            @include text-preset(4-mobile); 
-            max-width: 526px;
+    }
+    &__description{
+        @include text-preset(4-mobile); 
+        width: min(100%, 36ch);
+    } 
+    &__actions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-200); 
+       
+        @media (min-width: $breakpoint-tablet) {
+            gap: 17px;
+            flex-direction: row;
         }
-        &__actions{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--spacing-200);
-            @media (min-width: $breakpoint-tablet) {
-                gap: 17px;
-                flex-direction: row;
-            }
-            .button--primary span{
-                color: var(--color-cyan-300);
-            }
+        .button--primary span{
+            color: var(--color-cyan-300);
         }
     }
 }

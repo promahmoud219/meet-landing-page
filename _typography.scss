@@ -1,5 +1,4 @@
-@use "sass:map";
-@use "colors" as *;
+@use "sass:map"; 
 
 $font-red-hat-display: "Red Hat Display", sans-serif;
 
@@ -24,8 +23,7 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-  ),
-
+  ), 
   2-mobile: (
     font-family: $font-red-hat-display,
     font-size: 2rem,
@@ -39,16 +37,14 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: 900
-  ),
-
+  ), 
   3: (
     font-family: $font-red-hat-display,
     font-size: 1rem,
     line-height: 1.1,
     letter-spacing: 0.25rem,
     font-weight: 900
-  ),
-
+  ), 
   4-mobile: (
     font-family: $font-red-hat-display,
     font-size: 1rem,
@@ -62,8 +58,7 @@ $text-presets: (
     line-height: 1.1,
     letter-spacing: 0,
     font-weight: medium
-  ),
-
+  ), 
   5: (
     font-family: $font-red-hat-display,
     font-size: 1rem,

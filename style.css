@@ -105,24 +105,36 @@ a {
   gap: 21px;
   overflow: hidden;
 }
-.hero__gallery-tablet {
-  display: none;
+.hero__gallery img {
+  width: 100%;
 }
-@media (90rem >= min-width >= 48rem) {
-  .hero__gallery-mobile-and-desktop {
-    display: none;
-  }
-  .hero__gallery-tablet {
-    display: block;
-  }
-}
-.hero__gallery-mobile-and-desktop img {
+.hero__gallery--split img {
   width: 50%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.hero__gallery-tablet img {
-  width: 100%;
+.hero__gallery--combined {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .hero__gallery--split {
+    display: none;
+  }
+  .hero__gallery--combined {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 90rem) {
+  .hero__gallery--split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero__gallery--combined {
+    display: none;
+  }
 }
 .hero__content {
   display: -webkit-box;
@@ -136,13 +148,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
-  padding: 0px 50px;
+  padding: 0px 32px;
   text-align: center;
-}
-@media (min-width: 48rem) {
-  .hero__content {
-    width: 500px;
-  }
 }
 .hero__content #hero-title {
   font-family: "Red Hat Display", sans-serif;
@@ -167,15 +174,15 @@ a {
     font-weight: 900;
   }
 }
-.hero__content__description {
+.hero__description {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
   letter-spacing: 0;
   font-weight: medium;
-  max-width: 526px;
+  width: min(100%, 36ch);
 }
-.hero__content__actions {
+.hero__actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +196,7 @@ a {
   gap: var(--spacing-200);
 }
 @media (min-width: 48rem) {
-  .hero__content__actions {
+  .hero__actions {
     gap: 17px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -197,7 +204,7 @@ a {
             flex-direction: row;
   }
 }
-.hero__content__actions .button--primary span {
+.hero__actions .button--primary span {
   color: var(--color-cyan-300);
 }
 
