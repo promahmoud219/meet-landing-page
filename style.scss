@@ -101,13 +101,13 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         
         gap: 24px; 
         padding: 0px 32px;
         text-align: center;
-         
-        @media (min-width: $breakpoint-desktop) {
-            display: grid;
+        
+        @media (min-width: $breakpoint-desktop) { 
             grid-area: hero_content;
         }
 
@@ -131,13 +131,17 @@ a{
         flex-direction: column;
         align-items: center;
         gap: var(--spacing-200); 
-       
+
         @media (min-width: $breakpoint-tablet) {
             gap: 17px;
             flex-direction: row;
         }
         .button--primary span{
             color: var(--color-cyan-300);
+        }
+        .button{
+            width: 161px;
+            justify-content: center;
         }
     }
 }
