@@ -76,9 +76,6 @@ a {
 }
 
 .hero {
-  width: 100%;
-  padding-top: 64px;
-  padding-bottom: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,10 +83,16 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 48px;
+  overflow: hidden;
+  padding-top: 64px;
+  padding-bottom: 32px;
 }
 @media (min-width: 48rem) {
   .hero {
@@ -97,44 +100,12 @@ a {
     padding-bottom: 64px;
   }
 }
-.hero__gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  gap: 21px;
-  overflow: hidden;
+.hero__image--combined {
+  max-width: 100%;
 }
-.hero__gallery img {
-  width: 100%;
-}
-.hero__gallery--split img {
-  width: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.hero__gallery--combined {
+.hero__image--left, .hero__image--right {
   display: none;
-}
-@media (min-width: 48rem) {
-  .hero__gallery--split {
-    display: none;
-  }
-  .hero__gallery--combined {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-@media (min-width: 90rem) {
-  .hero__gallery--split {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .hero__gallery--combined {
-    display: none;
-  }
+  max-width: 100%;
 }
 .hero__content {
   display: -webkit-box;
@@ -150,6 +121,12 @@ a {
   gap: 24px;
   padding: 0px 32px;
   text-align: center;
+}
+@media (min-width: 90rem) {
+  .hero__content {
+    background: yellow;
+    grid-area: hero-content;
+  }
 }
 .hero__content #hero-title {
   font-family: "Red Hat Display", sans-serif;
