@@ -127,6 +127,7 @@ a {
   .hero__image--right {
     display: block;
     grid-area: img_right;
+    margin-top: 57px;
   }
 }
 .hero__content {
@@ -324,7 +325,7 @@ a {
     width: 504px;
   }
 }
-.features__content__heading-group {
+.features__heading-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,11 +339,11 @@ a {
   gap: 16px;
 }
 @media (min-width: 48rem) {
-  .features__content__heading-group {
+  .features__heading-group {
     width: 404px;
   }
 }
-.features__content__heading-group__title-eyebrow {
+.features__title-eyebrow {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -350,7 +351,7 @@ a {
   font-weight: 900;
   color: var(--color-cyan-600);
 }
-.features__content__heading-group #features-title {
+.features #features-title {
   font-family: "Red Hat Display", sans-serif;
   font-size: 2rem;
   line-height: 1.1;
@@ -358,7 +359,7 @@ a {
   font-weight: 900;
   color: var(--color-slate-900);
 }
-.features__content__description {
+.features__description {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   line-height: 1.1;
@@ -408,6 +409,25 @@ a {
           transform: translateX(-50%);
   background: var(--color-white);
 }
+.site-footer__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+.site-footer__description {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+  font-weight: medium;
+}
+@media (min-width: 48rem) {
+  .site-footer__description {
+    width: 504px;
+  }
+}
 .site-footer__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -426,25 +446,27 @@ a {
   padding: 64px 32px;
   height: 100%;
 }
-.site-footer__content__title {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: 0;
-  font-weight: 900;
-}
-.site-footer__content__description {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1rem;
-  line-height: 1.1;
-  letter-spacing: 0;
-  font-weight: medium;
-}
-@media (min-width: 48rem) {
-  .site-footer__content__description {
-    width: 504px;
-  }
-}
 .site-footer__content .button--secondary span {
   color: var(--color-purple-300);
+}
+@media (min-width: 90rem) {
+  .site-footer__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 112px 80px;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .site-footer__content .site-footer__title {
+    width: 17ch;
+    text-align: start;
+  }
+  .site-footer__content .site-footer__description {
+    width: 30ch;
+    text-align: start;
+  }
 }

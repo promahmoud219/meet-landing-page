@@ -93,6 +93,7 @@ a{
         &__image--right{
             display: block;
             grid-area: img_right;
+            margin-top: 57px;
         }
     }
 
@@ -216,29 +217,29 @@ a{
         @media (min-width: $breakpoint-tablet) {
             width: 504px;
         }
-        &__heading-group{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            @media (min-width: $breakpoint-tablet) {
-                width: 404px;
-            }
-            &__title-eyebrow{
-                @include text-preset(3);
-                color: var(--color-cyan-600);
-            }
-            #features-title{
-                @include text-preset(2-mobile);
-                color: var(--color-slate-900);
-            }
+        
+    }
+    &__heading-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        @media (min-width: $breakpoint-tablet) {
+            width: 404px;
         }
+    }
+    &__title-eyebrow{
+        @include text-preset(3);
+        color: var(--color-cyan-600);
+    }
+    #features-title{
+        @include text-preset(2-mobile);
+        color: var(--color-slate-900);
+    }
 
-        &__description{
-            @include text-preset(4-mobile);
-            color: var(--color-slate-600);
-        }
-
+    &__description{
+        @include text-preset(4-mobile);
+        color: var(--color-slate-600);
     }
 }
 
@@ -270,6 +271,17 @@ a{
         transform: translateX(-50%); 
         background: var(--color-white);
     }
+    &__title{
+        @include text-preset(2-mobile);
+        
+    }
+    &__description{
+        @include text-preset(4-mobile);
+        @media (min-width: $breakpoint-tablet) {
+            width: 504px;
+        }
+    }
+
     &__content{
         display: flex;
         flex-direction: column;
@@ -278,19 +290,25 @@ a{
         gap: 24px;
         padding: 64px 32px;
         height: 100%;
-        &__title{
-            @include text-preset(2-mobile);
-        }
-        &__description{
-            @include text-preset(4-mobile);
-            @media (min-width: $breakpoint-tablet) {
-                width: 504px;
-            }
-        }
         .button--secondary span{
             color: var(--color-purple-300);
         }
-
+        
+        
+        @media (min-width: $breakpoint-desktop) { 
+            flex-direction: row;
+            padding: 112px 80px;
+            width: 100%;
+            justify-content: space-evenly;
+            .site-footer__title{
+                width: 17ch;
+                text-align: start;
+            }    
+            .site-footer__description{
+                width: 30ch;
+                text-align: start;
+            }    
+        }
     }
 }
 
