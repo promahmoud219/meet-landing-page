@@ -140,6 +140,13 @@ a{
         .button--primary span{
             color: var(--color-cyan-300);
         }
+        .button--primary:hover{
+            background: var(--color-cyan-hover);
+        }
+
+        .button--secondary:hover{
+            background: var(--color-purple-hover);
+        }
         .button{
             width: 161px;
             justify-content: center;
@@ -293,6 +300,11 @@ a{
         .button--secondary span{
             color: var(--color-purple-300);
         }
+        
+        .button--secondary:hover {
+            background: var(--color-purple-hover);
+        }
+
         
         
         @media (min-width: $breakpoint-desktop) { 

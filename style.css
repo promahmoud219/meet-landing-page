@@ -15,8 +15,10 @@
 :root {
   --color-cyan-600: #4D96A9;
   --color-cyan-300: #8FE3F9;
+  --color-cyan-hover: #71C0D4;
   --color-purple-600: #855FB1;
   --color-purple-300: #D9B8FF;
+  --color-purple-hover: #B18BDD;
   --color-slate-900: #28283D;
   --color-slate-600: #87879D;
   --color-slate-300: #D1D1DF;
@@ -222,6 +224,12 @@ a {
 }
 .hero__actions .button--primary span {
   color: var(--color-cyan-300);
+}
+.hero__actions .button--primary:hover {
+  background: var(--color-cyan-hover);
+}
+.hero__actions .button--secondary:hover {
+  background: var(--color-purple-hover);
 }
 .hero__actions .button {
   width: 161px;
@@ -448,6 +456,9 @@ a {
 }
 .site-footer__content .button--secondary span {
   color: var(--color-purple-300);
+}
+.site-footer__content .button--secondary:hover {
+  background: var(--color-purple-hover);
 }
 @media (min-width: 90rem) {
   .site-footer__content {
